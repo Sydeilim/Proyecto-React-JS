@@ -1,0 +1,13 @@
+.container h2 {
+  text-align: center;
+  padding: 3rem;
+  padding-bottom: 0px;
+}
+.container {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;
+  gap: 20px;
+}

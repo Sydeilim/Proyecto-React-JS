@@ -1,0 +1,9 @@
+footer {
+  width: 100%;
+  background-color: #805D5D;    
+  color: white;              
+  text-align: center;        /* Centrado de texto */
+  padding: 15px;             /* Espacio interior */
+  margin-top: 50px;          /* Separación del contenido anterior */
+  margin-bottom: 0;
+}

@@ -1,7 +1,8 @@
+import "./Footer.css"
 export const Footer = () => {
     return (
         <footer>
-            <p>Pagina</p>
+             <p>&copy; 2025 Mi Sitio Web</p> 
         </footer>
     )
 }

@@ -1,0 +1,29 @@
+
+.item-list-container .title-car {
+  width: 100%;
+  padding-top: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.btn-container {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.total-pagar {
+  width: 100%;
+  text-align: center;
+}
+
+.item-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centra horizontalmente */
+  align-items: center;
+  gap: 20px;
+}

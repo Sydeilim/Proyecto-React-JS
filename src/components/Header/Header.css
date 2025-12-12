@@ -1,0 +1,41 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #242424;
+  padding: 0 20px;   
+  gap: 20px;
+  z-index: 1000; /* para que esté encima de otros elementos */
+}
+.contenedor-encabezado {
+  margin-bottom: 0;
+}
+
+/*Estilo para el nombre del sitio*/
+h1 {
+  font-weight: bold;
+}
+.part-uno {
+  color: #805D5D;
+  font-family: 'Hanken Grotesk', 'Schibsted Grotesk';
+}
+.part-dos {
+  color: #DFBDA1;
+  font-family: 'Source Serif 4', 'Source Sans 3';
+}
+
+/*Estilo para contener el nombre del sitio*/
+.container-nombre-sitio-web {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+.container-nombre-sitio-web a {
+  text-decoration: none; 
+}
+.container-nombre-sitio-web img {
+  height: 85px;
+  width: 80px;
+} 

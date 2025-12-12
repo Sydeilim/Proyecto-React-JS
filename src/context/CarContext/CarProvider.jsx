@@ -11,11 +11,25 @@ export const CarProvider = ({children}) => {
 
     const addItem = (item) => {
         if (exists(item.id)) {
-            alert("El producto ya existe");
-            return;
+          const updatedCar = car.map((prod) => {
+            if(prod.id === item.id) {
+                return {...prod, quantity: item.quantity + prod.quantity};
+            } else {
+                return prod;
+            }
+          });
+          setCar(updatedCar);
+          alert("Agregado al carrito");
+        } else  {
+            setCar([...car, item]);
+            alert(`${item.name} agregado al carrito`);
         }
-        setCar([...car, item]);
-        alert(`${item.name} agregado al carrito`);
+    };
+
+    const deleteItem = (id) => {
+        const filtered = car.filter((p) => p.id !== id);
+        setCar(filtered);
+        alert("Producto eliminado");
     };
 
     const clearCar = () => {
@@ -23,12 +37,24 @@ export const CarProvider = ({children}) => {
     };
 
     const getTotalItems = () => {
-       if(car.length) {
-            return car.length;
-       }
+        const totalItems = car.reduce((acc, prod) => acc + prod.quantity, 0);
+        return totalItems;
     };
 
-    const values = {car, addItem, clearCar, getTotalItems};
+    const total = () => {
+        const total = car.reduce((acc, prod) => acc + prod.price * prod.quantity, 0);
+        return Math.round(total*100)/100;
+    };
+
+    const checkout = () => {
+        const ok = confirm("Quiere finalizar su compra?");
+        if (ok) {
+            alert("Compra realizada con exito.");
+            clearCar();
+        } 
+    };
+    
+    const values = {car, addItem, clearCar, getTotalItems, deleteItem, total, checkout};
     return (
         <CarContext.Provider value={values}>
             {children}

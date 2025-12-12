@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import { useCarContext } from "../../context/CarContext/useCarContext";
+import "./Nav.css"
 
 export const Nav = () => {
     const {getTotalItems} = useCarContext();
     return (
-    <na>
+    <nav>
         <ul>
             <li> <Link to={"/"}>Inicio</Link></li>
             <li> <Link to={"/category/dulce"}>Dulce</Link> </li>
@@ -17,6 +18,6 @@ export const Nav = () => {
             
             </li>
         </ul>
-    </na>
+    </nav>
     );
 };
